@@ -1,0 +1,91 @@
+*{
+    font-family: 'Share Tech Mono', monospace;
+}
+body{
+
+    margin: 0;
+     
+            display: grid;
+            place-items: center;
+   
+
+
+            position: relative;
+            /*este es el contenedor grande que contiene los otros layouts*/
+            border: 8px solid black;
+            border-radius:40px;
+            height: 600px;
+            width: 600px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+ 
+            
+}
+
+
+#board, .boardInfo {
+    max-width: 800px;
+    background-color: rgb(186, 230, 249);
+    border-radius: 15%;
+
+}
+
+
+#board{
+    display:grid;
+    grid-template-columns: repeat(10, 1fr);
+
+
+
+}
+#start, .boardInfo{
+    font-size: 25px;
+}
+/*Oculto mientras el juego no empiece*/
+#gameOver{
+    display:none;
+}
+
+.boardInfo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+#start{
+    background-color: coral;
+    border:none;
+    color: white;
+}
+#scoreBoard {
+    display: inline-flex;
+}
+
+.square{
+   height: 40px;
+   width: 40px;
+
+
+ /*aspect-ratio: 1;*/
+}
+.emptySquare{
+    background-color: cornflowerblue;
+}
+.snakeSquare{
+    background-size: cover;
+    background-color: cornflowerblue;
+
+    background-repeat: no-repeat;
+    background-image: url('img/s3.avif');
+   
+    display:inline-block;
+}
+.foodSquare{
+    /*background-color: crimson;*/
+    background-size: cover;
+    background-color: cornflowerblue;
+
+    background-repeat: no-repeat;
+    background-image: url('img/manzana.png');
+   
+    display:inline-block;
+}
